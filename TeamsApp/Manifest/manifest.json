@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.12",
+  "version": "1.0.0",
+  "id": "4aa5ecba-22e6-4f0a-a470-91db1b0cfbd1",
+  "packageName": "com.microsoft.fhl2023.woodgroveteamsapp",
+  "developer": {
+    "name": "Woodgrove Inc.",
+    "websiteUrl": "https://www.microsoft.com/woodgrove",
+    "privacyUrl": "https://www.microsoft.com/woodgrove/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/woodgroce/termsofuse"
+  },
+  "name": {
+    "short": "Woodgrove",
+    "full": "Woodgrove Bank for Teams"
+  },
+  "description": {
+    "short": "Woodgrove for Microsoft Teams",
+    "full": "Enable Woodgrove account managers to communicate with their clients."
+  },
+  "icons": {
+    "outline": "woodgrovetree20x20.png",
+    "color": "woodgrovetree96x96.png"
+  },
+  "accentColor": "#FFFFFF",
+  "webApplicationInfo": {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "resource": "https://localhost:3978"
+  },
+  "activities":
+  {
+    "activityTypes": [
+      {
+        "type": "newLoanApplication",
+        "description": "New Loan Application",
+        "templateText": "You have a new loan application from {customerName}."
+      }
+    ]
+  },
+  "staticTabs": [
+    {
+      "entityId": "com.microsoft.fhl2023.home",
+      "name": "Home",
+      "contentUrl": "https://localhost:3978/teamsapp/default",
+      "websiteUrl": "https://localhost:3978/teamsapp/default",
+      "scopes": [
+        "personal"
+      ],
+      "context": [
+        "personalTab"
+      ]
+    },
+    {
+      "entityId": "com.microsoft.fhl2023.accounts",
+      "name": "Accounts",
+      "contentUrl": "https://localhost:3978/teamsapp/accounts",
+      "websiteUrl": "https://localhost:3978/teamsapp/accounts",
+      "scopes": [
+        "personal"
+      ],
+      "context": [
+        "personalTab"
+      ]
+    },
+    {
+      "entityId": "com.microsoft.fhl2023.chats",
+      "name": "Chats",
+      "contentUrl": "https://localhost:3978/teamsapp/chats",
+      "websiteUrl": "https://localhost:3978/teamsapp/chats",
+      "scopes": [
+        "personal"
+      ],
+      "context": [
+        "personalTab"
+      ]
+    },
+    {
+      "entityId": "com.microsoft.fhl2023.demo",
+      "name": "Demo",
+      "contentUrl": "https://localhost:3978/acsclient",
+      "websiteUrl": "https://localhost:3978/acsclient",
+      "scopes": [
+        "personal"
+      ],
+      "context": [
+        "personalTab"
+      ]
+    },
+    {
+      "entityId": "about",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://localhost:3978/teamsapp/configureTab",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team",
+        "groupchat"
+      ],
+      "context": [ "meetingChatTab", "meetingSidePanel" ]
+    }
+  ],
+  "validDomains": [
+    "localhost"
+  ]
+}

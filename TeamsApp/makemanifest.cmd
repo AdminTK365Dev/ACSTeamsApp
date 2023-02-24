@@ -1,0 +1,1 @@
+powershell.exe Compress-Archive -Path \"Manifest\*\" -DestinationPath \".\WoodgroveTeamsApp.zip\" -Force

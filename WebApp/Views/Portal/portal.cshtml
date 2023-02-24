@@ -1,0 +1,31 @@
+﻿<img src="~/images/woodgrovetree96x96.png" height="40" style="vertical-align:middle;"/>
+<span class="customer-info-heading" style="vertical-align:middle;">Woodgrove</span>
+
+<span id="userType" hidden>customer</span>
+
+<p>
+    <div id="customerSelectName" style="padding:10px">
+        <select id="customerSelect"></select>
+    </div>
+</p>
+
+<div class="grid-container" id="customer-grid-container" style="visibility:hidden;">
+    <div class="grid-item" id="customer-detail-grid-item"></div>
+    <div class="grid-item" id="customer-meetings-grid-item"></div>
+    <div class="grid-item" id="customer-documents-grid-item"></div>
+</div>
+
+<span id="threadDetail" hidden></span>
+<div class="messages-container" id="messages-container">
+    <span class="customer-info-heading">Messages</span>
+    <p></p>
+    <form>
+        <textarea placeholder="Type message.." id="message-box" class="message-box" required></textarea>
+        <button type="button" id="send-message" class="send-message">Send</button>
+    </form>
+</div>
+
+
+
+<p></p>
+<div id="threadMessages" class="messages-container"></div>

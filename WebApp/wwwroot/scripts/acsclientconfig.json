@@ -1,0 +1,4 @@
+{
+  "endpointUrl": "<your ACS resource endpoint URL>",
+  "apiRootUrl": "https://localhost:7262"
+}

@@ -1,0 +1,18 @@
+# Node.js
+package-lock.json
+node_modules/
+*_bundle.js
+
+# Visual Studio
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Teams app manifest compressed files
+*.zip

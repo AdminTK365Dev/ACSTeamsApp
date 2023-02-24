@@ -1,0 +1,29 @@
+﻿<span id="userType" hidden>employee</span>
+<span id="teamsUserId" hidden></span>
+<span id="teamsUserAcsId" hidden></span>
+
+<p>
+    <div id="customerSelectName" style="padding:10px">
+        <select id="customerSelect"></select>
+    </div>
+</p>
+
+<div class="grid-container" id="customer-grid-container" style="visibility:hidden;">
+    <div class="grid-item" id="customer-detail-grid-item"></div>
+    <div class="grid-item" id="customer-meetings-grid-item"></div>
+    <div class="grid-item" id="customer-documents-grid-item"></div>
+ </div>
+
+<span id="threadDetail" hidden></span>
+<div class="messages-container" id="messages-container" hidden>
+    <span class="customer-info-heading">Messages</span>
+    <p></p>
+    <form>
+        <textarea placeholder="Type message.." id="message-box" class="message-box" required></textarea>
+        <button type="button" id="send-message" class="send-message">Send</button>
+    </form>
+</div>
+
+<p></p>
+<div id="threadMessages" class="messages-container"></div>
+

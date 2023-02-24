@@ -1,0 +1,72 @@
+[
+  {
+    "acsId": "<replace with unique ACS ID from your ACS resource>",
+    "firstName": "Anne",
+    "lastName": "Mukasine",
+    "displayName": "Anne Mukasine",
+    "customerSince": "December 2020",
+    "accounts": [
+      {
+        "number": "986778-001",
+        "type": "Checking"
+      },
+      {
+        "number": "986778-007",
+        "type": "Retirement"
+      }
+    ],
+    "address": "One Microsoft Way",
+    "cityStateZip": "Redmond WA, 98052",
+    "primaryPhone": "425-555-1212",
+    "ssn": "***-**-1915",
+    "documents": [
+      {
+        "title": "Loan application NH127-34288",
+        "date": "Feb 18, 2023 9:23 AM (PST)"
+      }
+    ],
+    "meetings": [
+      {
+        "title": "Loan process review",
+        "date": "Friday Feb 24 11:00 AM (PST)"
+      }
+    ]
+  },
+  {
+    "acsId": "<replace with unique ACS ID from your ACS resource>",
+    "firstName": "Benjamin",
+    "lastName": "Lauritsen",
+    "displayName": "Benjamin Lauritsen",
+    "customerSince": "March 2018",
+    "accounts": [
+      {
+        "number": "986778-332",
+        "type": "Checking"
+      },
+      {
+        "number": "986778-330",
+        "type": "Savings"
+      },
+      {
+        "number": "986778-L23627",
+        "type": "Auto loan"
+      }
+    ],
+    "address": "1234 Market ",
+    "cityStateZip": "Seattle WA, 98107",
+    "primaryPhone": "",
+    "ssn": "***-**-1915",
+    "documents": [
+      {
+        "title": "Loan application NH127-34288",
+        "date": "Feb 18, 2023 9:23 AM (PST)"
+      }
+    ],
+    "meetings": [
+      {
+        "title": "Loan process review",
+        "date": "Friday Feb 24 11:00 AM (PST)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "aadId": "<replace with AAD object ID of Teams user>",
+    "acsId": "<replace with unique ACS ID from your ACS resource>",
+    "firstName": "Alina",
+    "lastName": "Woodgrove",
+    "displayName": "Alina Woodgrove"
+  },
+  {
+    "aadId": "<replace with AAD object ID of Teams user>",
+    "acsId": "<replace with unique ACS ID from your ACS resource>",
+    "firstName": "Bharat",
+    "lastName": "Woodgrove",
+    "displayName": "Bharat Woodgrove"
+  }
+]
