@@ -44,10 +44,12 @@
       "contentUrl": "https://localhost:3978/teamsapp/default",
       "websiteUrl": "https://localhost:3978/teamsapp/default",
       "scopes": [
-        "personal"
+        "personal",
+        "team"
       ],
       "context": [
-        "personalTab"
+        "personalTab",
+        "channelTab"
       ]
     },
     {
@@ -56,10 +58,12 @@
       "contentUrl": "https://localhost:3978/teamsapp/accounts",
       "websiteUrl": "https://localhost:3978/teamsapp/accounts",
       "scopes": [
-        "personal"
+        "personal",
+        "team"
       ],
       "context": [
-        "personalTab"
+        "personalTab",
+        "channelTab"
       ]
     },
     {
@@ -68,28 +72,47 @@
       "contentUrl": "https://localhost:3978/teamsapp/chats",
       "websiteUrl": "https://localhost:3978/teamsapp/chats",
       "scopes": [
-        "personal"
+        "personal",
+        "team"
       ],
       "context": [
-        "personalTab"
+        "personalTab",
+        "channelTab"
       ]
     },
     {
-      "entityId": "com.microsoft.fhl2023.demo",
-      "name": "Demo",
+      "entityId": "com.microsoft.fhl2023.accountsdemo",
+      "name": "Accounts Demo",
       "contentUrl": "https://localhost:3978/acsclient",
       "websiteUrl": "https://localhost:3978/acsclient",
       "scopes": [
-        "personal"
+        "personal",
+        "team"
       ],
       "context": [
-        "personalTab"
+        "personalTab",
+        "channelTab"
+      ]
+    },
+    {
+      "entityId": "com.microsoft.fhl2023.chatsdemo",
+      "name": "Chats Demo",
+      "contentUrl": "https://localhost:3978/acsclientchats",
+      "websiteUrl": "https://localhost:3978/acsclientchats",
+      "scopes": [
+        "personal",
+        "team"
+      ],
+      "context": [
+        "personalTab",
+        "channelTab"
       ]
     },
     {
       "entityId": "about",
       "scopes": [
-        "personal"
+        "personal",
+        "team"
       ]
     }
   ],
@@ -98,7 +121,6 @@
       "configurationUrl": "https://localhost:3978/teamsapp/configureTab",
       "canUpdateConfiguration": true,
       "scopes": [
-        "team",
         "groupchat"
       ],
       "context": [ "meetingChatTab", "meetingSidePanel" ]

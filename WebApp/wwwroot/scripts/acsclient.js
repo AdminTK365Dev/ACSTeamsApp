@@ -2,6 +2,8 @@
 import { ChatClient } from "@azure/communication-chat";
 
 const config = require("./acsclientconfig.json");
+const apiRootUrl = config.apiRootUrl; // "https://fhl2023.azurewebsites.net";
+//const apiRootUrl = "https://localhost:7262";
 
 const messagesContainer = document.getElementById("messages-container");
 const chatBox = document.getElementById("chat-box");
@@ -25,7 +27,7 @@ let fhlChatThreadClient;
 async function init() {
 
 	if (userType == "employee") {
-		fetch(config.apiRootUrl + "/api/employee?aadId=" + document.getElementById("teamsUserId").innerText)
+		fetch(apiRootUrl + "/api/employee?aadId=" + document.getElementById("teamsUserId").innerText)
 			.then(response => response.json())
 			.then(data => {
 				console.log(data);
@@ -34,7 +36,7 @@ async function init() {
 			.catch(error => console.log(error));
 	}
 
-	fetch(config.apiRootUrl + "/api/customer")
+	fetch(apiRootUrl + "/api/customer")
 		.then(response => response.json())
 		.then(data => {
 			console.log(data);
@@ -66,7 +68,7 @@ function populateCustomerSelect(data) {
 }
 
 customerSelect.addEventListener("change", (e) => {
-	fetch(config.apiRootUrl + "/api/customer?acsId=" + e.target.value)
+	fetch(apiRootUrl + "/api/customer?acsId=" + e.target.value)
 		.then(response => response.json())
 		.then(data => {
 			setCustomer(data);
@@ -139,7 +141,7 @@ function setCustomer(customerData) {
 	// get the chat thread
 	// if userType is customer, then only customer acsId is specified
 	// if userType is employee, then both customer acdID and employee aadId are specified
-	var getChatThreadUrl = config.apiRootUrl + "/api/customerChatThread?customerAcsId=" + customer.acsId;
+	var getChatThreadUrl = apiRootUrl + "/api/customerChatThread?customerAcsId=" + customer.acsId;
 	if (userType == "employee") getChatThreadUrl += "&employeeAadId=" + employee.aadId;
 	fetch(getChatThreadUrl)
 		.then(response => response.text())
@@ -153,7 +155,7 @@ function setCustomer(customerData) {
 async function getUserTokenCredential(user) {
 	try {
 		console.log(`getting token for: ${user.acsId}`);
-		var response = await fetch(config.apiRootUrl + "/api/accessToken?acsId=" + user.acsId);
+		var response = await fetch(apiRootUrl + "/api/accessToken?acsId=" + user.acsId);
 		var tokenData = await response.text();
 		console.log(`tokenData: ${tokenData}`);
 		userTokenCredential = new AzureCommunicationTokenCredential(tokenData);
@@ -236,15 +238,6 @@ function getMessageDisplayDate(messageDate) {
 	return (isSameDay) ? d.toLocaleTimeString([], { hour: "numeric", minute: "numeric" })
 		: d.toLocaleDateString([], { month: "numeric", day: "numeric" }) + " " + d.toLocaleTimeString([], { hour: "numeric", minute: "numeric" })
 }
-
-async function renderReceivedMessage(sender, message) {
-	messagesContainer.innerHTML += '<div class="container lighter"> <b>' + sender + '</b><br/>' + message + '</div>';
-}
-
-async function renderSentMessage(message) {
-	messagesContainer.innerHTML += '<div class="container darker">' + message + '</div>';
-}
-
 async function sendMessage() {
 	var displayName = (userType == "employee") ? employee.displayName : customer.displayName;
 	var sendMessageRequest = { content: messagebox.value };
@@ -265,3 +258,4 @@ messagebox.addEventListener("keydown", async (e) => {
 sendMessageButton.addEventListener("click", async () => {
 	await sendMessage();
 });
+

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ACS Client</title>
+        <link href="/content/acsclientstyles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        @RenderBody()
+        <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"
+            integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4"
+            crossorigin="anonymous"></script>
+        <script>
+            microsoftTeams.app.initialize();
+            try {
+		        microsoftTeams.app.getContext().then((context) => {
+                document.getElementById('teamsUserId').innerText = `${context.user.id}`;
+		        });
+            }
+            catch (e) {
+                console.error(e);
+            }
+
+            //document.getElementById('teamsUserId').innerText = "ad413434-b46e-492f-aa89-9ed9fbcbd41f"; // Alina (acct01)
+
+        </script>
+        <script src="/scripts/acsclientchats_bundle.js"></script>
+    </body>
+</html>

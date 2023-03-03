@@ -33,8 +33,8 @@ namespace WebApi
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Exception getting access token for: " + acsId);
-                //System.Diagnostics.Debug.WriteLine(ex);
+                //System.Diagnostics.Debug.WriteLine("Exception getting access token for: " + acsId);
+                System.Diagnostics.Debug.WriteLine(ex);
             }
 
             return token;
@@ -62,7 +62,7 @@ namespace WebApi
             ChatParticipant participant = new ChatParticipant(new CommunicationUserIdentifier(customer.acsId));
             participant.DisplayName = customer.displayName;
             chatParticipants.Add(participant);
-            CreateChatThreadResult createChatThreadResult = chatClient.CreateChatThread("Chat thread for Customer " + customer.acsId, chatParticipants);
+            CreateChatThreadResult createChatThreadResult = chatClient.CreateChatThread("Account: " + customer.displayName, chatParticipants);
             return createChatThreadResult.ChatThread.Id;
         }
 
