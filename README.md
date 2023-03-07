@@ -10,7 +10,7 @@ The projects in the repo demonstrate how ACS can be used in a custom Teams app t
 - A Communication resource has been provisioned in an Azure subscription. [Quickstart: Create and manage Communication Services resources](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp)
 - A Teams tenant.  You will need to retrieve the Azure AD object ID of any Teams users that you want to leverage the Teams app.
 - [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/) version 17.5 Preview 2 or later. This allows you to use [Visual Studio dev tunnels](https://learn.microsoft.com/en-us/aspnet/core/test/dev-tunnels?view=aspnetcore-7.0) for the WebApp and WebApi, which need public facing URLs if you want to allow others to use the app against your local dev machine without first deploying the WebAPI and WebApp to Azure.
-- Alternatively, you can use NGROK tunnels.
+- Alternatively, you can use [NGROK tunnels](https://ngrok.com/). 
 - Install the latest version of .NET 6 and node.js.
 
 ## Setup and  Configuration
